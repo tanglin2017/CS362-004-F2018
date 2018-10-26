@@ -1,0 +1,95 @@
+Result for running dominion tests:
+unittest1.c:
+buyCard(): PASS when player with 5 coins can NOT buy a duchy card because he does not have any buy left.
+buyCard(): PASS when player with 5 coins and 2 buy can buy a duchy card (2 duchy cards available).
+buyCard(): PASS when player with 5 coins and 2 buy can NOT buy a duchy card because 0 duchy card available.
+buyCard(): PASS when player with 5 coins and 2 buy can NOT buy a province card (2 province cards available).
+buyCard(): PASS after a player with 10 coins and 2 buys purchases a province card, he has 2 coins and 1 buy left.
+buyCard(): FAIL after a player0 purchases a province card, he has 5 cards in total. (He had 5 cards before this purchase)
+buyCard(): PASS after a player purchases a province card (2 province cards available), it has 1 province card left.
+File 'dominion.c'
+Lines executed:4.86% of 555
+Branches executed:9.69% of 413
+Taken at least once:2.66% of 413
+Calls executed:5.38% of 93
+Creating 'dominion.c.gcov'
+
+unittest2.c:
+supplyCount(): PASS when number of duchy card is 0.
+supplyCount(): PASS when number of duchy card is 2.
+File 'dominion.c'
+Lines executed:0.36% of 555
+Branches executed:0.00% of 413
+Taken at least once:0.00% of 413
+Calls executed:0.00% of 93
+Creating 'dominion.c.gcov'
+
+unittest3.c:
+whoseTurn(): PASS when it is player1's turn.
+whoseTurn(): PASS when it is player2's turn.
+File 'dominion.c'
+Lines executed:0.36% of 555
+Branches executed:0.00% of 413
+Taken at least once:0.00% of 413
+Calls executed:0.00% of 93
+Creating 'dominion.c.gcov'
+
+unittest4.c:
+getCost(): PASS when the cost of curse card is 0 coin.
+getCost(): PASS when the cost of estate card is 2 coins.
+getCost(): PASS when the cost of duchy card is 5 coins.
+getCost(): PASS when the cost of province card is 8 coins.
+getCost(): PASS when the cost of copper card is 0 coin.
+getCost(): PASS when the cost of silver card is 3 coins.
+File 'dominion.c'
+Lines executed:1.44% of 555
+Branches executed:6.78% of 413
+Taken at least once:1.45% of 413
+Calls executed:0.00% of 93
+Creating 'dominion.c.gcov'
+
+cardtest1.c:
+TESTING adventurerRefactor(): set all cards on deck as copper cards
+adventurerRefactor(): PASS when player draws 2 and keeps 2 copper cards.
+TESTING adventurerRefactor(): set all cards on deck as silver cards
+adventurerRefactor(): PASS when player draws 2 and keeps 2 silver cards.
+TESTING adventurerRefactor(): set all cards on deck as gold cards
+adventurerRefactor(): FAIL when player draws 2 and keeps 0 gold cards.
+File 'dominion.c'
+Lines executed:22.52% of 555
+Branches executed:24.94% of 413
+Taken at least once:16.95% of 413
+Calls executed:12.90% of 93
+Creating 'dominion.c.gcov'
+
+cardtest2.c:
+TESTING smithyRefactor(): after player uses smithy card, he should have 2 more card in hand
+smithyRefactor(): FAIL when player has 1 more cards after he plays smithy card.
+File 'dominion.c'
+Lines executed:20.90% of 555
+Branches executed:23.49% of 413
+Taken at least once:14.77% of 413
+Calls executed:11.83% of 93
+Creating 'dominion.c.gcov'
+
+cardtest3.c:
+TESTING council_roomRefactor(): after player uses council_room card, he should have 3 more cards in hand after he draws 4 cards
+council_roomRefactor(): FAIL when player has -1 more cards after he plays council_room card.
+File 'dominion.c'
+Lines executed:21.26% of 555
+Branches executed:23.97% of 413
+Taken at least once:15.25% of 413
+Calls executed:11.83% of 93
+Creating 'dominion.c.gcov'
+
+cardtest4.c:
+TESTING remodelRefactor():
+remodelRefactor() PASS when the system does not allow player to gain a curse card with cost 0
+remodelRefactor() FAIL when player has 2 less cards than before he uses remodel card.
+File 'dominion.c'
+Lines executed:22.70% of 555
+Branches executed:31.23% of 413
+Taken at least once:15.98% of 413
+Calls executed:13.98% of 93
+Creating 'dominion.c.gcov'
+
